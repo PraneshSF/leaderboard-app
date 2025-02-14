@@ -12,7 +12,7 @@ cd leaderboard-app
 npm install
 
 
-3️⃣ Start the database server:
+3️⃣ Start the database server (optional):
 
 json-server --watch db.json --port 3000
 
