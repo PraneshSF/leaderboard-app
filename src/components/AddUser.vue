@@ -1,9 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useUserStore } from "../store/userStore";
-import ActionButton from "./ActionButton.vue";
-import FormInput from "./FormInput.vue";
-import FormTextArea from "./FormTextArea.vue";
+import ActionButton from "@/components/ActionButton.vue";
+import FormInput from "@/components/FormInput.vue";
+import FormTextArea from "@/components/FormTextArea.vue";
 
 const userStore = useUserStore();
 const newUser = ref({ name: "", age: "", address: "" });
@@ -89,7 +89,7 @@ const emit = defineEmits(["close"]);
 </script>
 
 <template>
-  <section class="fixed inset-0 bg-black/50 backdrop-blur bg-opacity-50 flex justify-center items-center px-6">
+  <section class="fixed inset-0 bg-black/50 backdrop-blur bg-opacity-50 flex justify-center items-center px-6" @click.self="emit('close')">
     <div class="relative flex flex-col bg-white p-6 gap-4 rounded-lg shadow-lg w-full max-w-xl">
       <font-awesome-icon 
         @click="emit('close')" 

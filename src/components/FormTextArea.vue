@@ -37,7 +37,7 @@
   const inputValue = ref(props.modelValue);
   
   const updateValue = (event) => {
-    emit("update:modelValue", event.target.value);
+    emit("update:modelValue", event.target.value?.trim());
   };
   </script>
   
