@@ -71,7 +71,7 @@ export const useUserStore = defineStore("userStore", {
   getters: {
     filteredUsers: (state) => {
       return state.users.filter((user) =>
-        user.name.toLowerCase().includes(state.searchQuery)
+        user.name.toLowerCase().includes(state.searchQuery.toLowerCase())
       );
     },
   },
